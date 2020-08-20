@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		027B152224EECA1400BA7FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B152124EECA1400BA7FB9 /* AppDelegate.swift */; };
 		027B152424EECA1400BA7FB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B152324EECA1400BA7FB9 /* SceneDelegate.swift */; };
-		027B152624EECA1400BA7FB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B152524EECA1400BA7FB9 /* ViewController.swift */; };
 		027B152924EECA1400BA7FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B152724EECA1400BA7FB9 /* Main.storyboard */; };
 		027B152B24EECA1900BA7FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027B152A24EECA1900BA7FB9 /* Assets.xcassets */; };
 		027B152E24EECA1900BA7FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B152C24EECA1900BA7FB9 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		027B151E24EECA1400BA7FB9 /* maisondupecheur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maisondupecheur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027B152124EECA1400BA7FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027B152324EECA1400BA7FB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		027B152524EECA1400BA7FB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		027B152824EECA1400BA7FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		027B152A24EECA1900BA7FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027B152D24EECA1900BA7FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,46 @@
 		027B152024EECA1400BA7FB9 /* maisondupecheur */ = {
 			isa = PBXGroup;
 			children = (
-				027B152124EECA1400BA7FB9 /* AppDelegate.swift */,
-				027B152324EECA1400BA7FB9 /* SceneDelegate.swift */,
-				027B152524EECA1400BA7FB9 /* ViewController.swift */,
-				027B152724EECA1400BA7FB9 /* Main.storyboard */,
-				027B152A24EECA1900BA7FB9 /* Assets.xcassets */,
-				027B152C24EECA1900BA7FB9 /* LaunchScreen.storyboard */,
+				027B153524EECA7500BA7FB9 /* Model */,
+				027B153624EECA7C00BA7FB9 /* View */,
+				027B153724EECA8100BA7FB9 /* Controller */,
+				027B153824EECA8600BA7FB9 /* Ressource */,
 				027B152F24EECA1900BA7FB9 /* Info.plist */,
 			);
 			path = maisondupecheur;
+			sourceTree = "<group>";
+		};
+		027B153524EECA7500BA7FB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		027B153624EECA7C00BA7FB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				027B152724EECA1400BA7FB9 /* Main.storyboard */,
+				027B152C24EECA1900BA7FB9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		027B153724EECA8100BA7FB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		027B153824EECA8600BA7FB9 /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				027B152124EECA1400BA7FB9 /* AppDelegate.swift */,
+				027B152324EECA1400BA7FB9 /* SceneDelegate.swift */,
+				027B152A24EECA1900BA7FB9 /* Assets.xcassets */,
+			);
+			path = Ressource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +167,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				027B152624EECA1400BA7FB9 /* ViewController.swift in Sources */,
 				027B152224EECA1400BA7FB9 /* AppDelegate.swift in Sources */,
 				027B152424EECA1400BA7FB9 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QG34LC43K;
 				INFOPLIST_FILE = maisondupecheur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frjerome.maisondupecheur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7QG34LC43K;
 				INFOPLIST_FILE = maisondupecheur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.frjerome.maisondupecheur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="maisondupecheur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="855-GJ-OUZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="5We-hA-9KV"/>
+                                </constraints>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maison" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-hS-egh">
+                                <rect key="frame" x="87.5" y="160" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TA9-FY-Ifz"/>
+                                    <constraint firstAttribute="width" constant="200" id="wcO-a6-fAS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2393997014" green="0.34433951969999999" blue="0.40283966059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="855-GJ-OUZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ut3-sS-1i2"/>
+                            <constraint firstItem="PCc-hS-egh" firstAttribute="top" secondItem="855-GJ-OUZ" secondAttribute="bottom" constant="-120" id="WJb-mw-sq0"/>
+                            <constraint firstItem="855-GJ-OUZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f7V-38-31f"/>
+                            <constraint firstItem="PCc-hS-egh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDM-5n-MVv"/>
+                            <constraint firstItem="855-GJ-OUZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xX9-f2-dvG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="maison" width="137" height="102.5"/>
+    </resources>
+</document>
