@@ -9,15 +9,32 @@
 import UIKit
 import MapKit
 
+enum InfosChoice {
+    case infos, weather, pictures, phone, mail, adress
+}
+
 final class HomeController: UIViewController {
 
     // MARK: - Properties
+    
+    private var infosChoice: InfosChoice!
     
     // MARK: - Outlets
 
     @IBOutlet private weak var houseImage: UIImageView!
     @IBOutlet private weak var houseMap: MKMapView!
-    @IBOutlet private var buttonToRounded: [UIButton]!
+    @IBOutlet private var allButtons: [UIButton]!
+    @IBOutlet private var allStackViews: [UIStackView]!
+    @IBOutlet private weak var backgroundInfoView: UIView!
+    
+    // In stack view infos :
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var bodyLabel: UILabel!
+    @IBOutlet private weak var indexPage: UIPageControl!
+    @IBOutlet private weak var houseImages: UIImageView!
+    @IBOutlet private weak var buttonArrowLeft: UIButton!
+    @IBOutlet private weak var buttonArrowRight: UIButton!
     
     // MARK: - Initializer
 
@@ -27,9 +44,27 @@ final class HomeController: UIViewController {
         initUI()
     }
     
+    // MARK: - Action
+    
+    @IBAction func tappOnButtons(_ sender: UIButton) {
+        animateToHideOnLeft()
+    }
+    
+    @IBAction func tapLocationAround() {
+        animateToHideLittleButtons()
+    }
+    
+    @IBAction func tapDismissButton() {
+        showAllButtons()
+    }
+    
     // MARK: - Private functions
     
     private func initUI() {
+        setUpUI()
+    }
+    
+    private func setUpUI() {
         houseImage.layer.cornerRadius = houseImage.bounds.height/2
         houseImage.layer.borderWidth = 4
         houseImage.layer.borderColor = UIColor.white.cgColor
@@ -42,10 +77,70 @@ final class HomeController: UIViewController {
         houseMap.setRegion(region, animated: true)
         houseMap.isUserInteractionEnabled = false
         
-        for button in buttonToRounded {
+        for button in allButtons {
             button.layer.cornerRadius = 20
-            button.layer.borderWidth = 4
+            button.layer.borderWidth = 3
             button.layer.borderColor = UIColor.white.cgColor
+        }
+        backgroundInfoView.layer.cornerRadius = 20
+        backgroundInfoView.layer.borderWidth = 3
+        backgroundInfoView.layer.borderColor = UIColor.white.cgColor
+        
+        indexPage.isUserInteractionEnabled = false
+    }
+    
+    private func animateToHideOnLeft() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.allStackViews[0].transform = CGAffineTransform(translationX: -200, y: 0)
+            self.allStackViews[0].layer.opacity = 0
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.allStackViews[1].transform = CGAffineTransform(translationX: -200, y: 0)
+                self.allStackViews[1].layer.opacity = 0
+            }) { (_) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.allStackViews[2].transform = CGAffineTransform(translationX: -200, y: 0)
+                    self.allStackViews[2].layer.opacity = 0
+                }) { (_) in
+                    self.backgroundInfoView.isHidden = false
+                }
+            }
+        }
+    }
+    
+    private func animateToHideLittleButtons() {
+        allStackViews[1].isHidden = true
+        allStackViews[2].isHidden = true
+        UIView.animate(withDuration: 1.2) {
+            self.allStackViews[0].transform = CGAffineTransform(translationX: -200, y: 0)
+            self.allStackViews[0].layer.opacity = 0
+        }
+    }
+    
+    private func returnHome() {
+        allStackViews[1].isHidden = false
+        allStackViews[2].isHidden = false
+        UIView.animate(withDuration: 1.2) {
+            self.allStackViews[0].transform = .identity
+            self.allStackViews[0].layer.opacity = 1
+        }
+    }
+    
+    private func showAllButtons() {
+        backgroundInfoView.isHidden = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.allStackViews[0].transform = .identity
+            self.allStackViews[0].layer.opacity = 1
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.allStackViews[1].transform = .identity
+                self.allStackViews[1].layer.opacity = 1
+            }) { (_) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.allStackViews[2].transform = .identity
+                    self.allStackViews[2].layer.opacity = 1
+                })
+            }
         }
     }
 }
