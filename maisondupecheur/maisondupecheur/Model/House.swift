@@ -24,7 +24,7 @@ final class House {
     60 m², 5 personnes, 260-570€/semaine, 60-100€/nuit
 
     Située dans le centre du village des Mathes, au coeur de la Charente-Maritime, à 20 min de Royan et 1h de La Rochelle sur la route des plages, à proximité de tous les commerces (boulangerie, boucherie, supermarché, poste, marché, église, ...), à 5 km de l'océan.
-    Possibilité d'accés aux plages par un étendu réseau de pistes cyclables qui longent toutes les plages.
+    Possibilité d'accès aux plages par un étendu réseau de pistes cyclables qui longent toutes les plages.
     Voir l'adresse dans l'onglet "Enveloppe".
     """
 }

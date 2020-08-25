@@ -14,6 +14,13 @@
 		027B152E24EECA1900BA7FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B152C24EECA1900BA7FB9 /* LaunchScreen.storyboard */; };
 		027B153A24EED63F00BA7FB9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B153924EED63F00BA7FB9 /* HomeController.swift */; };
 		027B153C24EFF48D00BA7FB9 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B153B24EFF48D00BA7FB9 /* House.swift */; };
+		027B153E24F0080200BA7FB9 /* LocationAroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B153D24F0080200BA7FB9 /* LocationAroundController.swift */; };
+		027B154424F55A3B00BA7FB9 /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B154324F55A3B00BA7FB9 /* LocationsController.swift */; };
+		027B154624F55AC800BA7FB9 /* InfoLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B154524F55AC800BA7FB9 /* InfoLocationController.swift */; };
+		027B154824F55E3B00BA7FB9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B154724F55E3B00BA7FB9 /* Location.swift */; };
+		027B154A24F5626000BA7FB9 /* Locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 027B154924F5626000BA7FB9 /* Locations.json */; };
+		027B154F24F571A900BA7FB9 /* ResultLocationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B154D24F571A900BA7FB9 /* ResultLocationSearchCell.swift */; };
+		027B155024F571A900BA7FB9 /* ResultLocationSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027B154E24F571A900BA7FB9 /* ResultLocationSearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		027B152F24EECA1900BA7FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027B153924EED63F00BA7FB9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		027B153B24EFF48D00BA7FB9 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		027B153D24F0080200BA7FB9 /* LocationAroundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAroundController.swift; sourceTree = "<group>"; };
+		027B154324F55A3B00BA7FB9 /* LocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsController.swift; sourceTree = "<group>"; };
+		027B154524F55AC800BA7FB9 /* InfoLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLocationController.swift; sourceTree = "<group>"; };
+		027B154724F55E3B00BA7FB9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		027B154924F5626000BA7FB9 /* Locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Locations.json; sourceTree = "<group>"; };
+		027B154D24F571A900BA7FB9 /* ResultLocationSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocationSearchCell.swift; sourceTree = "<group>"; };
+		027B154E24F571A900BA7FB9 /* ResultLocationSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultLocationSearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				027B153B24EFF48D00BA7FB9 /* House.swift */,
+				027B154724F55E3B00BA7FB9 /* Location.swift */,
+				027B154924F5626000BA7FB9 /* Locations.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +96,8 @@
 			children = (
 				027B152724EECA1400BA7FB9 /* Main.storyboard */,
 				027B152C24EECA1900BA7FB9 /* LaunchScreen.storyboard */,
+				027B154D24F571A900BA7FB9 /* ResultLocationSearchCell.swift */,
+				027B154E24F571A900BA7FB9 /* ResultLocationSearchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				027B153924EED63F00BA7FB9 /* HomeController.swift */,
+				027B153D24F0080200BA7FB9 /* LocationAroundController.swift */,
+				027B154324F55A3B00BA7FB9 /* LocationsController.swift */,
+				027B154524F55AC800BA7FB9 /* InfoLocationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,7 +183,9 @@
 			files = (
 				027B152E24EECA1900BA7FB9 /* LaunchScreen.storyboard in Resources */,
 				027B152B24EECA1900BA7FB9 /* Assets.xcassets in Resources */,
+				027B154A24F5626000BA7FB9 /* Locations.json in Resources */,
 				027B152924EECA1400BA7FB9 /* Main.storyboard in Resources */,
+				027B155024F571A900BA7FB9 /* ResultLocationSearchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				027B152224EECA1400BA7FB9 /* AppDelegate.swift in Sources */,
+				027B154F24F571A900BA7FB9 /* ResultLocationSearchCell.swift in Sources */,
 				027B152424EECA1400BA7FB9 /* SceneDelegate.swift in Sources */,
+				027B154824F55E3B00BA7FB9 /* Location.swift in Sources */,
+				027B153E24F0080200BA7FB9 /* LocationAroundController.swift in Sources */,
+				027B154624F55AC800BA7FB9 /* InfoLocationController.swift in Sources */,
+				027B154424F55A3B00BA7FB9 /* LocationsController.swift in Sources */,
 				027B153C24EFF48D00BA7FB9 /* House.swift in Sources */,
 				027B153A24EED63F00BA7FB9 /* HomeController.swift in Sources */,
 			);

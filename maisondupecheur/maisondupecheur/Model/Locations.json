@@ -1,0 +1,203 @@
+{
+   "detailJSON": [
+      {
+         "name":"ALDI",
+         "detail": "Chaîne de supermarchés à prix bas proposant, entre autres, des fruits, légumes, viandes et laitages.",
+         "type": "Supermarchés",
+         "url": "https://www.google.fr/maps/dir/31+Rue+L%C3%A9on+Nicolle,+17570+Les+Mathes/ALDI,+Rue+de+la+Source,+Arvert/@45.7320896,-1.1506406,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48017b6d21e2ed53:0x8da21e75de54f45c!2m2!1d-1.1459749!2d45.7200635!1m5!1m1!1s0x48017ad396b30c81:0x1559dec0fd3b9a13!2m2!1d-1.120287!2d45.7431156!3e0",
+         "image": "aldi"
+      },
+      
+      {
+         "name":"Carrefour",
+         "detail": "Carrefour est un groupe français du secteur de la grande distribution, pionnier du concept d’hypermarché en 1963.",
+         "type": "Supermarchés",
+         "url": "https://www.google.fr/maps/dir/31+Rue+L%C3%A9on+Nicolle,+17570+Les+Mathes/Carrefour+Contact,+Avenue+de+l'Oc%C3%A9an,+Les+Mathes/@45.7047996,-1.1800915,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48017b6d21e2ed53:0x8da21e75de54f45c!2m2!1d-1.1459749!2d45.7200635!1m5!1m1!1s0x48017c6b455e2825:0xedd52798ac885010!2m2!1d-1.1784218!2d45.6895227!3e0",
+         "image": "carrefour"
+      },
+      
+      {
+         "name":"Super U",
+         "detail": "Système U est une coopérative de commerçants de grande distribution française présidée par Dominique Schelcher. Le groupement coopératif rassemble les enseignes Hyper U, Super U, U Express qui est le supplantant Marché U et Utile, réseau de magasin de proximité dans les communes en campagne.",
+         "type": "Supermarchés",
+         "url": "https://www.google.fr/maps/dir/31+Rue+L%C3%A9on+Nicolle,+17570+Les+Mathes/Super+U+et+Drive,+Avenue+de+l'Etrade,+Arvert/@45.7387439,-1.1545171,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48017b6d21e2ed53:0x8da21e75de54f45c!2m2!1d-1.1459749!2d45.7200635!1m5!1m1!1s0x480165fc1e69ad65:0xc97d53790ea6e175!2m2!1d-1.1394134!2d45.7542519!3e0",
+         "image": "superU"
+      },
+      
+      {
+         "name":"Intermarché",
+         "detail": "Intermarché est une enseigne française de grande distribution du groupe Les Mousquetaires fondé en 1969 sous l'enseigne EX Offices de distribution par Jean-Pierre Le Roch. Par la suite, les EX deviendront, en 1972, Intermarché.",
+         "type": "Supermarchés",
+         "url": "https://www.google.fr/maps/dir/31+Rue+L%C3%A9on+Nicolle,+17570+Les+Mathes/Intermarch%C3%A9+SUPER+La+Tremblade+et+Drive,+Zone+d'am%C3%A9nagement+concert%C3%A9+des+Bregaudi%C3%A8res,+La+Tremblade/@45.7398949,-1.1702787,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48017b6d21e2ed53:0x8da21e75de54f45c!2m2!1d-1.1459749!2d45.7200635!1m5!1m1!1s0x480164d8bfd1a7b5:0xd1c3a368b4dfa899!2m2!1d-1.1277858!2d45.7596627!3e0",
+         "image": "intermarche"
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "À visiter",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Restaurants",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Restaurants",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Restaurants",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Restaurants",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Dégustations",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Dégustations",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Dégustations",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Plages",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Plages",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Plages",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Plages",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Services",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Services",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Services",
+         "url": "",
+         "image": ""
+      },
+      
+      {
+         "name":"",
+         "detail": "",
+         "type": "Services",
+         "url": "",
+         "image": ""
+      }
+   ]
+}

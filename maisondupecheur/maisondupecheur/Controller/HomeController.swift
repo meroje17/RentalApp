@@ -42,6 +42,12 @@ final class HomeController: UIViewController {
         initUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        returnHome()
+    }
+    
     // MARK: - Action
     
     @IBAction func tappOnButtons(_ sender: UIButton) {
@@ -132,9 +138,11 @@ final class HomeController: UIViewController {
     private func animateToHideLittleButtons() {
         allStackViews[1].isHidden = true
         allStackViews[2].isHidden = true
-        UIView.animate(withDuration: 1.2) {
+        UIView.animate(withDuration: 1.2, animations: {
             self.allStackViews[0].transform = CGAffineTransform(translationX: -200, y: 0)
             self.allStackViews[0].layer.opacity = 0
+        }) { (_) in
+            self.performSegue(withIdentifier: "tapLocationButton", sender: nil)
         }
     }
     
