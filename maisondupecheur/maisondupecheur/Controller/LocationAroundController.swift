@@ -12,7 +12,10 @@ final class LocationAroundController: UIViewController {
 
     // MARK: - Property
     
+    // All types of location
     private var types = ["À visiter", "Restaurants", "Dégustations", "Plages", "Services", "Supermarchés"]
+    
+    // Choice type by user
     private var locationChoice: String = String()
     
     // MARK: - Outlet
@@ -29,10 +32,12 @@ final class LocationAroundController: UIViewController {
     
     // MARK: - Action
     
+    // User tap on dismiss button to return on preview controller
     @IBAction func tapDismissButton() {
         dismiss(animated: true, completion: nil)
     }
     
+    // User tap on type of location button
     @IBAction func tapLocationButtons(_ sender: UIButton) {
         locationChoice = types[sender.tag]
         self.performSegue(withIdentifier: "locationTypeChoosed", sender: nil)
@@ -40,12 +45,14 @@ final class LocationAroundController: UIViewController {
     
     // MARK: - Private functions
     
+    // Send type of location wanted to the next controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "locationTypeChoosed", let nextController = segue.destination as? LocationsController {
             nextController.typeLocation = locationChoice
         }
     }
     
+    // Init user interface to rounded button and assign text 
     private func initUI() {
         var index = 0
         var indexType = 0

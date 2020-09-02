@@ -13,7 +13,10 @@ final class HomeController: UIViewController {
 
     // MARK: - Properties
     
+    // Object house which contain all informations about him
     private let house = House()
+    
+    // Index of image (in picture stack view)
     private var imageIndex = 0
     
     // MARK: - Outlets
@@ -25,7 +28,6 @@ final class HomeController: UIViewController {
     @IBOutlet private weak var backgroundInfoView: UIView!
     
     // In stack view infos :
-    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var bodyLabel: UILabel!
     @IBOutlet private weak var indexPage: UIPageControl!
@@ -50,25 +52,30 @@ final class HomeController: UIViewController {
     
     // MARK: - Action
     
+    // User tap on button
     @IBAction func tappOnButtons(_ sender: UIButton) {
         animateToHideOnLeft()
         tapOnButton(sender.tag)
     }
     
+    // User tap location around button
     @IBAction func tapLocationAround() {
         animateToHideLittleButtons()
     }
     
+    // User tap to call button
     @IBAction func tapActionButton() {
         if let url = URL(string: "tel://\(house.phoneNumber)") {
             UIApplication.shared.open(url)
         }
     }
     
+    // User tap dismiss button
     @IBAction func tapDismissButton() {
         showAllButtons()
     }
     
+    // User tap to arrow button to see next or preview image
     @IBAction func tapArrowButtons(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -84,15 +91,15 @@ final class HomeController: UIViewController {
     
     // MARK: - Private functions
     
+    // All initial configuration
     private func initUI() {
-        setUpUI()
-    }
-    
-    private func setUpUI() {
+        
+        // Set up principal image of house
         houseImage.layer.cornerRadius = houseImage.bounds.height/2
         houseImage.layer.borderWidth = 4
         houseImage.layer.borderColor = UIColor.white.cgColor
         
+        // Set up map view
         let basicLocation = CLLocationCoordinate2D(latitude: 45.72175979614258, longitude: -1.1450577974319458)
         let regionLatitudeMeters: CLLocationDistance = 15000
         let regionLongitudeMeters: CLLocationDistance = 15000
@@ -101,11 +108,14 @@ final class HomeController: UIViewController {
         houseMap.setRegion(region, animated: true)
         houseMap.isUserInteractionEnabled = false
         
+        // Set up buttons
         for button in allButtons {
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 3
             button.layer.borderColor = UIColor.white.cgColor
         }
+        
+        // Set up all background views
         backgroundInfoView.layer.cornerRadius = 20
         backgroundInfoView.layer.borderWidth = 3
         backgroundInfoView.layer.borderColor = UIColor.white.cgColor
@@ -113,9 +123,11 @@ final class HomeController: UIViewController {
         stackButton.layer.borderWidth = 2
         stackButton.layer.borderColor = UIColor.white.cgColor
         
+        // Set up index page
         indexPage.isUserInteractionEnabled = false
     }
     
+    // Animation to hide buttons
     private func animateToHideOnLeft() {
         UIView.animate(withDuration: 0.3, animations: {
             self.allStackViews[0].transform = CGAffineTransform(translationX: -200, y: 0)
@@ -135,6 +147,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // Animation to hide all little buttons and after location around button
     private func animateToHideLittleButtons() {
         allStackViews[1].isHidden = true
         allStackViews[2].isHidden = true
@@ -146,6 +159,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // Animation to return home (identity position)
     private func returnHome() {
         allStackViews[1].isHidden = false
         allStackViews[2].isHidden = false
@@ -155,6 +169,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // Animation to show all buttons after dismiss action
     private func showAllButtons() {
         backgroundInfoView.isHidden = true
         UIView.animate(withDuration: 0.3, animations: {
@@ -173,6 +188,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // All actions to do after tap on button
     private func tapOnButton(_ number: Int) {
         switch number {
         case 2:
@@ -186,6 +202,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // Hide all image stack view interface
     private func hideAllImageSystem(_ bool: Bool) {
         indexPage.isHidden = bool
         houseImages.isHidden = bool
@@ -194,6 +211,7 @@ final class HomeController: UIViewController {
         bodyLabel.isHidden = !bool
     }
     
+    // Prepare all text interface
     private func setUpLabels(_ number: Int) {
         bodyLabel.font = UIFont(name: "Verdana", size: 20)
         bodyLabel.textAlignment = .center
@@ -220,6 +238,7 @@ final class HomeController: UIViewController {
         }
     }
     
+    // Prepare all image stack view interface
     private func setUpImageStack() {
         stackButton.isHidden = true
         titleLabel.text = "IMAGES"

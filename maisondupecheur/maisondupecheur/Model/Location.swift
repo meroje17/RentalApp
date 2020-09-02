@@ -8,6 +8,7 @@
 
 import Foundation
 
+// All types of location around the house
 enum LocationType: String {
     case visit = "À visiter"
     case restaurant = "Restaurants"
@@ -17,25 +18,28 @@ enum LocationType: String {
     case market = "Supermarchés"
 }
 
-// MARK: - Mamacita
-struct LocationJSON: Codable {
+// MARK: - Struct for decode JSON
+
+struct LocationJSON: Decodable {
     let detailJSON: [DetailJSON]
 }
 
-// MARK: - DetailJSON
-struct DetailJSON: Codable {
+struct DetailJSON: Decodable {
     let name, detail, url, type, image: String
 }
 
+// MARK: - Object Location
 
 final class Location {
     
     // MARK: - Properties
     
+    // All location loading with Locations.json
     static var list : [Location] {
         return convert(json: loadJSON())
     }
     
+    // Properties to pretend be Location
     var type: LocationType
     var title: String
     var body: String
@@ -54,6 +58,7 @@ final class Location {
     
     // MARK: - Private function
     
+    // Loading JSON from Locations.json
     static private func loadJSON() -> [DetailJSON] {
         let decoder = JSONDecoder()
         guard let url = Bundle.main.url(forResource: "Locations", withExtension: "json") else { return [DetailJSON]() }
@@ -62,6 +67,7 @@ final class Location {
         return result.detailJSON
     }
     
+    // Transform detailsJSON on Location
     static private func convert(json: [DetailJSON]) -> [Location] {
         var locations = [Location]()
         for detail in json {

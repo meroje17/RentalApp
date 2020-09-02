@@ -17,6 +17,7 @@ final class ResultLocationSearchCell: UITableViewCell {
     
     // MARK: - Initializer
     
+    // Init cell : rounded view and assign name in label
     func configure(with name: String) {
         viewToRounded.layer.cornerRadius = 10
         nameOfLocation.text = name

@@ -8,10 +8,12 @@
 
 import Foundation
 
+// MARK: - Object House
 final class House {
     
     // MARK: - Properties
     
+    // All informations about the house
     let phoneNumber = "0662014871"
     let mail = "jose.guerin@orange.fr"
     let adress = """
